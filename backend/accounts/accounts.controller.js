@@ -103,7 +103,7 @@ function registerSchema(req, res, next) {
 }
 
 function register(req, res, next) {
-    const origin = req.get('origin') || req.headers.origin || req.headers.referer || 'http://localhost:4000';
+    const origin = req.get('origin') || req.headers.origin || req.headers.referer || 'https://final-project-4jpf.onrender.com';
     accountService.register(req.body, origin)
         .then(() => res.json({ message: 'Registration successful, please check your email for verification instructions' }))
         .catch(next);

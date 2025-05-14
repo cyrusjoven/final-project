@@ -273,7 +273,7 @@ function basicDetails(account) {
 async function sendVerificationEmail(account, origin) {
     let message;
     // Use backend URL for verification
-    const backendUrl = 'http://localhost:4000';
+    const backendUrl = 'https://final-project-4jpf.onrender.com';
     const verifyUrl = `${backendUrl}/accounts/verify-email?token=${account.verificationToken}&origin=${encodeURIComponent(origin)}`;
     
     message = `<p>Please click the below link to verify your email address:</p>
